@@ -1,5 +1,7 @@
 import middleware from './middleware'
 
 export default {
-  middleware
+  authorize: middleware.authorize,
+  refresh: middleware.refresh,
+  revoke: middleware.revoke
 }

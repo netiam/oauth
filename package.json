@@ -41,6 +41,8 @@
   "dependencies": {
     "babel-runtime": "^5.8.9",
     "debug": "^2.2.0",
-    "lodash": "^3.10.0"
+    "lodash": "^3.10.0",
+    "moment": "^2.10.5",
+    "mongoose": "^4.1.0"
   }
 }
