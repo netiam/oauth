@@ -5,7 +5,7 @@
   "scripts": {
     "build": "./bin/build",
     "clean": "./bin/clean",
-    "lint": "./bin/test",
+    "lint": "./bin/lint",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "start": "npm run watch",
     "test": "npm run test:unit",
