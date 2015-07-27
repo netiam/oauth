@@ -1,0 +1,45 @@
+{
+  "name": "netiam-oauth",
+  "version": "1.0.0",
+  "description": "An implementation of the OAuth 2.0 authorization framework",
+  "main": "index.js",
+  "scripts": {
+    "build": "./bin/build",
+    "clean": "./bin/clean",
+    "lint": "./bin/test",
+    "start": "npm run watch",
+    "test": "npm run test:unit",
+    "test:unit": "mocha",
+    "test:coverage": "instanbul cover _mocha --report lcovonly -- -R spec",
+    "watch": "./bin/watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/netiam/oauth.git"
+  },
+  "keywords": [
+    "OAuth",
+    "Authorization",
+    "Server"
+  ],
+  "author": "Hannes Moser <hannes@impossiblearts.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/netiam/oauth/issues"
+  },
+  "homepage": "https://github.com/netiam/oauth#readme",
+  "devDependencies": {
+    "babel": "^5.8.9",
+    "babel-eslint": "^4.0.5",
+    "eslint": "^0.24.1",
+    "istanbul": "^0.3.17",
+    "mocha": "^2.2.5",
+    "semantic-release": "^3.3.2",
+    "should": "^7.0.2"
+  },
+  "dependencies": {
+    "babel-runtime": "^5.8.9",
+    "debug": "^2.2.0",
+    "lodash": "^3.10.0"
+  }
+}
