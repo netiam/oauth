@@ -10,7 +10,7 @@
     "start": "npm run watch",
     "test": "npm run test:unit",
     "test:unit": "mocha",
-    "test:coverage": "instanbul cover _mocha --report lcovonly -- -R spec",
+    "test:coverage": "istanbul cover _mocha --report lcovonly -- -R spec",
     "watch": "./bin/watch"
   },
   "repository": {
@@ -31,6 +31,7 @@
   "devDependencies": {
     "babel": "^5.8.9",
     "babel-eslint": "^4.0.5",
+    "codeclimate-test-reporter": "^0.1.0",
     "eslint": "^0.24.1",
     "istanbul": "^0.3.17",
     "mocha": "^2.2.5",
