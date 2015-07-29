@@ -13,6 +13,7 @@ const Token = new Schema({
     default: function() {
       return crypto.randomBytes(64).toString('hex')
     },
+    unqiue: true,
     required: true
   },
   token_type: {
@@ -31,6 +32,12 @@ const Token = new Schema({
     ref: 'Client',
     required: true
   },
+  scope: [
+    {
+      type: String,
+      enum: ['user']
+    }
+  ],
   expires_at: {
     type: Date,
     default: function() {

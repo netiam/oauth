@@ -1,8 +1,7 @@
 import {Schema} from 'mongoose'
-import plugins from 'netiam/lib/rest/schema/plugins'
 
 const Client = new Schema({
-  key: {
+  name: {
     type: String,
     unique: true,
     required: true
@@ -11,6 +10,21 @@ const Client = new Schema({
     type: String,
     required: true
   },
+  uri: {
+    type: String
+  },
+  scope: [
+    {
+      type: String,
+      enum: ['user']
+    }
+  ],
+  grants: [
+    {
+      type: String,
+      enum: ['authorization_code', 'implicit', 'password', 'client_credentials']
+    }
+  ],
   type: {
     type: String,
     enum: ['confidential', 'public'],

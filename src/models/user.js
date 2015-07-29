@@ -4,10 +4,8 @@ function notImplemented() {
 
 export default Object.freeze({
   getId: notImplemented,
-  getSecret: notImplemented,
-  getRedirectUri: notImplemented,
   getById: notImplemented,
-  compareSecret: notImplemented,
-  checkGrantType: notImplemented,
-  checkScope: notImplemented
+  getByUsername: notImplemented,
+  comparePassword: notImplemented,
+  getBySession: notImplemented
 })
