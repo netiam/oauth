@@ -10,6 +10,12 @@ const Client = new Schema({
   secret: {
     type: String,
     required: true
+  },
+  type: {
+    type: String,
+    enum: ['confidential', 'public'],
+    default: 'public',
+    required: true
   }
 })
 
