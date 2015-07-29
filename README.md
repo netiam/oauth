@@ -6,3 +6,7 @@
 
 > A pure OAuth 2.0 authorization library
 
+## References
+
+* [The OAuth 2.0 Authorization Framework](https://tools.ietf.org/html/rfc6749#page-18)
+* [OAuth 2.0 Token Revocation](https://tools.ietf.org/html/rfc7009)
