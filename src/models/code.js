@@ -9,6 +9,6 @@ export default Object.freeze({
   getClientId: notImplemented,
   getScope: notImplemented,
   getByCode: notImplemented,
-  create: notImplemented
+  create: notImplemented,
   removeByCode: notImplemented
 })
