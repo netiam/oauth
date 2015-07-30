@@ -10,3 +10,4 @@
 
 * [The OAuth 2.0 Authorization Framework](https://tools.ietf.org/html/rfc6749#page-18)
 * [OAuth 2.0 Token Revocation](https://tools.ietf.org/html/rfc7009)
+* [OAuth 2.0 Server PHP](https://github.com/bshaffer/oauth2-server-php)
