@@ -11,7 +11,8 @@ describe('Tokens', () => {
 
     User
       .create({
-        email: 'hannes@impossiblearts.com'
+        email: 'hannes@impossiblearts.com',
+        password: 't3stt3st'
       })
       .then(user => {
         user.should.have.property('email')
