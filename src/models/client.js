@@ -1,13 +1,8 @@
-function notImplemented() {
-  throw new Error('Method not implemented')
-}
+import Waterline from 'waterline'
+import schema from './schema/clients'
 
-export default Object.freeze({
-  getId: notImplemented,
-  getSecret: notImplemented,
-  getRedirectUri: notImplemented,
-  getById: notImplemented,
-  compareSecret: notImplemented,
-  checkGrantType: notImplemented,
-  checkScope: notImplemented
+export default Waterline.Collection.extend({
+  identity: 'client',
+  connection: 'default',
+  attributes: Object.assign({}, schema)
 })

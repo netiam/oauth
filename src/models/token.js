@@ -1,8 +1,8 @@
 import Waterline from 'waterline'
-import schema from './schema/users'
+import schema from './schema/tokens'
 
 export default Waterline.Collection.extend({
-  identity: 'user',
+  identity: 'token',
   connection: 'default',
   attributes: Object.assign({}, schema)
 })

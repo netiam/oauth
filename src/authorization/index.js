@@ -3,7 +3,7 @@ import clientCredentials from './client-credentials'
 import implicit from './implicit'
 import password from './password'
 
-function getByType(type) {
+function get(type) {
   if (type === 'authorization_code') {
     return authorizationCode
   }
@@ -23,6 +23,6 @@ function getByType(type) {
   throw new Error(`The requested grant_type "${type}" is invalid`)
 }
 
-export default {
-  getByType
-}
+export default Object.freeze({
+  get
+})
