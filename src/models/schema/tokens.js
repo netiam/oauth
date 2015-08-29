@@ -2,7 +2,6 @@ import crypto from 'crypto'
 import moment from 'moment'
 import {
   TTL_ACCESS_TOKEN,
-  TTL_REFRESH_TOKEN,
   TOKEN_TYPE_ACCESS,
   TOKEN_TYPE_REFRESH
 } from '../../tokens/bearer'

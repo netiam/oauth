@@ -1,4 +1,4 @@
-export default function(spec, req, res) {
+export default function(spec, req) {
   const {collection} = spec
   const {usernameField} = spec
   const {passwordField} = spec
