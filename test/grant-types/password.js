@@ -33,6 +33,12 @@ describe('OAuth', () => {
             return done(err)
           }
 
+          res.body.should.have.properties(['code', 'status', 'message', 'data'])
+          res.body.data.should.be.an.Array()
+          res.body.data.should.have.length(1)
+          res.body.data[0].should.have.properties('code', 'message')
+          res.body.data[0].code.should.eql(1003)
+
           done()
         })
     })
