@@ -7,6 +7,7 @@ export default function(spec) {
   const app = express()
   const auth = oauth({
     db,
+    idField: 'id',
     usernameField: 'email',
     passwordField: 'password'
   })
