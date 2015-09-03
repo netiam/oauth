@@ -11,7 +11,6 @@ export default function(spec) {
   const {passwordField} = spec.config
   const {username} = spec.params
   const {password} = spec.params
-  const {scope} = spec.params
 
   if (!username) {
     throw errors.badRequest(
@@ -46,6 +45,7 @@ export default function(spec) {
           }
 
           tokens.create({
+            user,
             type: 'bearer',
             config: spec.config
           })
