@@ -6,7 +6,7 @@ cache:
 notifications:
   email: false
 node_js:
-  - iojs-3
+  - iojs-2
 before_script:
   - npm prune
   - npm run test:coverage
