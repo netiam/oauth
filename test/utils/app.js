@@ -6,7 +6,9 @@ export default function(spec) {
   const {db} = spec
   const app = express()
   const auth = oauth({
-    db
+    db,
+    usernameField: 'email',
+    passwordField: 'password'
   })
 
   app.use(bodyParser.urlencoded({extended: false}))
