@@ -1,33 +1,56 @@
-export default function(spec, req) {
-  const {collection} = spec
-  const {usernameField} = spec
-  const {passwordField} = spec
-  const username = req.body.username
-  const password = req.body.password
+import bcrypt from 'bcrypt'
+import dbg from 'debug'
+import tokens from '../../tokens'
+import {
+  TOKEN_TYPE_ACCESS,
+  TOKEN_TYPE_REFRESH
+} from '../../tokens/bearer'
+import * as errors from 'netiam-errors'
 
-  return new Promise((resolve, reject) => {
-    collection
-      .findOne({
-        [usernameField]: username
-      }).exec()
-      .then(user => {
-        if (!user) {
-          return reject(new Error('User does not exist', 404))
-        }
+const debug = dbg('authorization/grant-types/password')
 
-        user.comparePassword(password, user[passwordField], (err, isMatch) => {
-          if (err) {
-            return reject(err)
-          }
+export default function(spec) {
+  const User = spec.config.db.collections.user
+  const Token = spec.config.db.collections.token
+  const {idField} = spec.config
+  const {refreshToken} = spec.params
 
-          if (!isMatch) {
-            return reject(new Error('User credentials are invalid', 400))
-          }
+  if (!refreshToken) {
+    throw errors.badRequest(
+      `Parameter "refreshToken" is undefined`, [errors.Codes.E4001])
+  }
 
-          return resolve()
-        })
+  return Token
+    .findOne({
+      'token': refreshToken,
+      'token_type': TOKEN_TYPE_REFRESH
+    })
+    .then(token => {
+      if (!token) {
+        throw errors.notFound(
+          `Refresh token does not exist "${refreshToken}"`,
+          [errors.Codes.E4012])
+      }
+
+      return token.owner
+    })
+    .then(userId => {
+      return User.findOne({
+        [idField]: userId
       })
-      .then(null, reject)
-  })
+        .then(user => {
+          if (!user) {
+            throw errors.notFound(
+              `Invalid token. Token owner "${userId}" does not exist.`,
+              [errors.Codes.E4003])
+          }
+
+          return tokens.create({
+            user,
+            type: 'bearer',
+            config: spec.config
+          })
+        })
+    })
 
 }
