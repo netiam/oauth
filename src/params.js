@@ -1,3 +1,5 @@
+import * as errors from 'netiam-errors'
+
 export default function(req) {
   if (req.method === 'GET') {
     return {
@@ -6,6 +8,7 @@ export default function(req) {
       grantType: req.query.grant_type || undefined,
       username: req.query.username || undefined,
       password: req.query.password || undefined,
+      refreshToken: req.query.refresh_token || undefined
     }
   }
 
@@ -16,9 +19,11 @@ export default function(req) {
       grantType: req.body.grant_type || undefined,
       username: req.body.username || undefined,
       password: req.body.password || undefined,
+      refreshToken: req.body.refresh_token || undefined
     }
   }
 
   throw errors.methodNotAllowed(
-    'Authorization request must either be of type "GET" or "POST"')
+    'Authorization request must either use method "GET" or "POST"',
+    [errors.Codes.E4001])
 }
