@@ -7,7 +7,6 @@ export default function authorize(spec) {
   return function(req, res) {
     try {
       const normalizedParams = params(req)
-
       const grantType = authorization.get(normalizedParams)
       return grantType({
         config: spec,
