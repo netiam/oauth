@@ -51,6 +51,6 @@
     "moment": "2.10.6",
     "netiam-errors": "2.4.0",
     "uuid": "2.0.1",
-    "waterline": "0.10.27"
+    "waterline": "0.10.28"
   }
 }
