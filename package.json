@@ -51,6 +51,6 @@
     "lodash": "4.0.1",
     "netiam-errors": "2.4.0",
     "uuid": "2.0.1",
-    "waterline": "0.10.30"
+    "waterline": "0.10.31"
   }
 }
