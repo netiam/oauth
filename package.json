@@ -30,7 +30,7 @@
   "homepage": "https://github.com/netiam/oauth#readme",
   "devDependencies": {
     "babel-eslint": "6.0.2",
-    "babel": "6.3.26",
+    "babel": "6.5.0",
     "codeclimate-test-reporter": "0.3.1",
     "eslint": "2.7.0",
     "express": "4.13.4",
