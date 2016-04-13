@@ -34,7 +34,7 @@
     "codeclimate-test-reporter": "0.3.1",
     "eslint": "2.7.0",
     "express": "4.13.4",
-    "istanbul": "0.4.2",
+    "istanbul": "0.4.3",
     "mocha": "2.4.5",
     "rimraf": "2.5.0",
     "sails-disk": "0.10.8",
