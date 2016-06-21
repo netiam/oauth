@@ -33,7 +33,7 @@
     "babel": "6.3.26",
     "codeclimate-test-reporter": "0.3.3",
     "eslint": "2.13.1",
-    "express": "4.13.4",
+    "express": "4.14.0",
     "istanbul": "0.4.4",
     "mocha": "2.5.3",
     "rimraf": "2.5.2",
