@@ -36,7 +36,7 @@
     "express": "4.14.0",
     "istanbul": "0.4.4",
     "mocha": "2.5.3",
-    "rimraf": "2.5.2",
+    "rimraf": "2.5.3",
     "sails-disk": "0.10.10",
     "semantic-release": "4.3.5",
     "should": "9.0.2",
