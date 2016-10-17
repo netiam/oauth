@@ -50,7 +50,7 @@
     "moment": "2.15.1",
     "lodash": "4.16.3",
     "netiam-errors": "4.1.0",
-    "uuid": "2.0.2",
+    "uuid": "2.0.3",
     "waterline": "0.12.2"
   }
 }
