@@ -49,7 +49,7 @@
     "debug": "2.4.5",
     "lodash": "4.17.4",
     "moment": "2.17.1",
-    "netiam-errors": "4.1.0",
+    "netiam-errors": "4.1.1",
     "uuid": "3.0.1",
     "waterline": "0.12.2"
   }
