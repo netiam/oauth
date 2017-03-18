@@ -48,7 +48,7 @@
     "body-parser": "1.17.1",
     "debug": "2.5.0",
     "lodash": "4.17.4",
-    "moment": "2.17.1",
+    "moment": "2.18.0",
     "netiam-errors": "4.1.1",
     "uuid": "3.0.1",
     "waterline": "0.12.2"
