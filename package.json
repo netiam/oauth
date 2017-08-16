@@ -38,7 +38,7 @@
     "mocha": "3.4.2",
     "rimraf": "2.6.1",
     "sails-disk": "0.10.10",
-    "semantic-release": "6.3.6",
+    "semantic-release": "7.0.1",
     "should": "11.2.0",
     "supertest": "2.0.1"
   },
